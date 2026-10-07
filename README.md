@@ -13,8 +13,9 @@
 
 ## 发布给朋友
 
-将本目录内的所有文件和 `assets/fruits` 文件夹上传到自己的公开 GitHub 仓库，并在仓库 Settings → Pages 中选择 `main` 分支和 `/ (root)`，等待部署完成后即可分享：
+将本目录内的所有文件上传到自己的公开 GitHub 仓库，并在仓库 Settings → Pages 中选择 `main` 分支和 `/ (root)`，等待部署完成后即可分享：
 
 `https://你的用户名.github.io/仓库名/`
 
 11 张奶蛙贴图已随项目内置，页面不依赖 GitHub Raw 远程图片。贴图来自用户指定的 [YHSome/BigNaiWa](https://github.com/YHSome/BigNaiWa) 仓库，当前版本用于朋友私下试玩。
+
