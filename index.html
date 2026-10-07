@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#fff7e8" />
+  <title>合成奶蛙</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <img class="brand-mark" src="assets/fruits/01-grape.webp" alt="小奶蛙" />
+        <div>
+          <h1>合成奶蛙</h1>
+          <p>把小奶蛙合成更大的奶蛙</p>
+        </div>
+      </div>
+      <div class="stats" aria-label="游戏统计">
+        <div class="stat"><span>分数</span><strong id="score">0</strong></div>
+        <div class="stat"><span>最高分</span><strong id="best">0</strong></div>
+      </div>
+      <div class="actions">
+        <button id="soundBtn" class="icon-btn" type="button" aria-label="切换音效">🔊</button>
+        <button id="restartBtn" class="primary-btn" type="button">↻ 重开</button>
+      </div>
+    </header>
+
+    <section class="game-layout">
+      <div class="board-wrap">
+        <div class="board-heading">
+          <span>拖动瞄准，松手投放</span>
+          <span class="next-label">下一个 <span id="nextName">小奶蛙</span></span>
+        </div>
+        <div class="board-shell">
+          <canvas id="game" width="420" height="700" aria-label="合成奶蛙游戏区域"></canvas>
+          <div id="gameOver" class="overlay hidden">
+            <div class="result-card">
+              <img class="result-emoji" src="assets/fruits/11-watermelon.webp" alt="神奶蛙" />
+              <h2>奶蛙堆满啦</h2>
+              <p>本局得分 <strong id="finalScore">0</strong></p>
+              <p class="best-line">最高分 <strong id="finalBest">0</strong></p>
+              <button id="playAgainBtn" class="primary-btn wide" type="button">再来一局</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside class="side-panel">
+        <div class="tip-card">
+          <h2>玩法</h2>
+          <ul>
+            <li>同等级奶蛙碰到一起，会合成更大的奶蛙。</li>
+            <li>奶蛙停在警戒线以上太久，就会结束游戏。</li>
+            <li>电脑点击投放，手机拖动后松手投放。</li>
+          </ul>
+        </div>
+        <div class="chain-card">
+          <h2>合成链</h2>
+          <div id="chain" class="chain"></div>
+        </div>
+        <p class="source-note">贴图来自 <a href="https://github.com/YHSome/BigNaiWa" target="_blank" rel="noreferrer">YHSome/BigNaiWa</a>，已随网页包内置。</p>
+      </aside>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
